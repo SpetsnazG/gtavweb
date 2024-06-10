@@ -1022,8 +1022,12 @@ body {
 }
 .about--banner {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 475px;
 }
+
 .about--banner::before {
   content: "";
   position: absolute;
@@ -1117,19 +1121,22 @@ body {
   height: 75px;
   text-decoration: none;
   color: #fff;
-  border: 6px solid #0e6627;
+  border: 3px solid #6c0367;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .about--options > a:nth-child(1) {
-  background-image: url("../img/collab1.png");
+  background-image: url("../img/collabrockstar.png");
 }
 .about--options > a:nth-child(2) {
-  background-image: url("../img/collab2.png");
+  background-image: url("../img/collabpumpfun.png");
 }
 .about--options > a:nth-child(3) {
-  background-image: url("../img/collab3.png");
+  background-image: url("../img/collabphoton.png");
+}
+.about--options > a:nth-child(4) {
+  background-image: url("../img/collabaltv.png"); /*dexturkburaya*/
 }
 .about--options > a:hover h3 {
   bottom: -50px;
@@ -1138,7 +1145,7 @@ body {
   position: absolute;
   bottom: -38px;
   left: 10px;
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   -webkit-transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
   transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
@@ -1646,4 +1653,23 @@ body {
 
 .outer-nav li.is-vis:nth-child(5) {
   transition-delay: 0.16s;
+}
+
+.earnyazi {
+  font-family: Inter;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(180deg, #000 10%, #5B013C 42.5%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo11 {
+  margin-right: -200px;
+}
+
+.logo-container {
+  margin-top: 100px;
 }
