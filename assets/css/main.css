@@ -1540,7 +1540,7 @@ body {
   position: relative;
   transform: translateZ(0) translateX(0) rotateY(0deg);
   min-height: 100%;
-  outline: 30px solid #0f33ff; /* Menü dış rengi */
+  outline: 30px solid #eaebf2; /* Menü dış rengi */
   transition: transform 0.4s;
 }
 
@@ -1559,7 +1559,7 @@ body {
 
 .effect-rotate-left--animate .container {
   transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
-  outline: 30px solid #088e87; /* Effect dış rengi */
+  outline: 30px solid #545656; /* Effect dış rengi */
 }
 
 .outer-nav {
@@ -1620,7 +1620,7 @@ body {
   width: 110%;
   height: 15px;
   opacity: 0;
-  background-color: #0f33ff; /* Buton rengi */
+  background-color: #ffffff; /* Buton rengi */
 }
 
 .outer-nav > li.is-active::before {
