@@ -364,6 +364,14 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+  .about--options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    }
 }
 @media (max-width: 736px) and (min-width: 360px) and (orientation: landscape) {
   .device-notification {
@@ -1661,7 +1669,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background: linear-gradient(180deg, #000 10%, #5B013C 42.5%);
+  background: linear-gradient(180deg, #000 10%, #5b013c 42.5%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1674,13 +1682,15 @@ body {
   margin-top: 100px;
 }
 
+
+
 .roadmap {
   position: fixed;
-  top: 14%;
-  left: 6%;
-  width: 80%;
-  height: 80%;
-  background-image: url("../img/Tokenomics\ \(2\).png");
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 65%;
+  background-image: url("../img/roadmap2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1716,5 +1726,30 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
+}
+
+@media (max-width: 768px) {
+  .logoabout {
+      display: block; /* Mobilde logonun görünmesini sağlar */
+      width: 100px;   /* Logo boyutunu ayarlar */
+      margin: 0 auto; /* Ortalar */
+  }
+
+  .partnerships {
+      display: flex;  /* İçeriği düzenler */
+      flex-direction: column;  /* İçeriği dikey hizalar */
+      align-items: center;     /* Ortalar */
+  }
+
+  .partnerships img {
+      width: 80%; /* Resimlerin boyutlarını ayarlar */
+      margin-bottom: 20px; /* Resimlerin altına boşluk ekler */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
 }
