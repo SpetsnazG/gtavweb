@@ -1674,16 +1674,70 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.logo11 {
-  margin-right: -200px;
+
+@media only screen and (max-width: 768px) {
+  
+}
+/* Küçük ekranlar (mobil cihazlar) için */
+@media (max-width: 768px) {
+  .logoabout {
+    display: block; /* Mobilde logonun görünmesini sağlar */
+    width: 10%; /* Logo boyutunu ayarlar */
+    margin: 10%; /* Ortalar */
+  }
+
+  .partnerships {
+    display: flex; /* İçeriği düzenler */
+    flex-direction: column; /* İçeriği dikey hizalar */
+    align-items: center; /* Ortalar */
+  }
+
+  .partnerships img {
+    width: 80%; /* Resimlerin boyutlarını ayarlar */
+    margin-bottom: 20px; /* Resimlerin altına boşluk ekler */
+  }
+
+  .roadmap {
+    position: relative; /* Mobilde sabit pozisyondan kaçınmak için */
+    top: auto;
+    left: auto;
+    width: 100%; /* Genişliği %100 yapar */
+    height: auto; /* Yüksekliği otomatik yapar */
+    background-image: url("../img/roadmap2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .roadmap--lockup {
+    position: relative;
+    display: flex;
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
-.logo-container {
-  margin-top: 100px;
+/* Orta büyüklükte ekranlar için */
+@media (max-width: 1180px) {
+  .roadmap--lockup {
+    max-width: 90%;
+  }
 }
 
+/* Orta büyüklükte ekranlar için (alt sınır) */
+@media (max-width: 767px) {
+  .roadmap--lockup {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-
+/* Büyük ekranlar için */
 .roadmap {
   position: fixed;
   top: 20%;
@@ -1695,61 +1749,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .roadmap--lockup {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  width: 900px;
+  width: 90%;
   max-width: 75%;
   height: 100%;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
   margin: 0 auto;
-}
-
-@media (max-width: 1180px) {
-  .roadmap--lockup {
-    max-width: 90%;
-  }
-}
-@media (max-width: 767px) {
-  .roadmap--lockup {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .logoabout {
-      display: block; /* Mobilde logonun görünmesini sağlar */
-      width: 100px;   /* Logo boyutunu ayarlar */
-      margin: 0 auto; /* Ortalar */
-  }
-
-  .partnerships {
-      display: flex;  /* İçeriği düzenler */
-      flex-direction: column;  /* İçeriği dikey hizalar */
-      align-items: center;     /* Ortalar */
-  }
-
-  .partnerships img {
-      width: 80%; /* Resimlerin boyutlarını ayarlar */
-      margin-bottom: 20px; /* Resimlerin altına boşluk ekler */
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  
 }
