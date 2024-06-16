@@ -1694,69 +1694,68 @@ body {
 
   .partnerships img {
     width: 80%; /* Resimlerin boyutlarını ayarlar */
-    margin-bottom: 20px; /* Resimlerin altına boşluk ekler */
+    margin-bottom: 5%; /* Resimlerin altına boşluk ekler */
   }
 
-  .roadmap {
-    position: relative; /* Mobilde sabit pozisyondan kaçınmak için */
-    top: auto;
-    left: auto;
-    width: 100%; /* Genişliği %100 yapar */
-    height: auto; /* Yüksekliği otomatik yapar */
-    background-image: url("../img/roadmap2.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .roadmap--lockup {
-    position: relative;
-    display: flex;
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
-/* Orta büyüklükte ekranlar için */
-@media (max-width: 1180px) {
-  .roadmap--lockup {
-    max-width: 90%;
-  }
-}
-
-/* Orta büyüklükte ekranlar için (alt sınır) */
-@media (max-width: 767px) {
-  .roadmap--lockup {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Büyük ekranlar için */
+/*roadmap kısmı*/
+/* Genel stil */
 .roadmap {
-  position: fixed;
-  top: 20%;
-  left: 20%;
-  width: 60%;
-  height: 65%;
+  position: relative; /* Sabit pozisyondan kaçınıyoruz */
+  width: 100%; /* Genişliği %100 yapar */
+  height: auto; /* Yüksekliği otomatik yapar */
   background-image: url("../img/roadmap2.png");
   background-position: center;
-  background-size: cover;
+  background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
   background-repeat: no-repeat;
+  margin: 0 auto; /* Ortalar */
 }
 
+/* İçerik stil */
 .roadmap--lockup {
-  position: relative;
-  display: flex;
-  width: 90%;
-  max-width: 75%;
+  position: absolute; /* İçeriği roadmap içinde konumlandırmak için */
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin: 0 auto;
+  justify-content: center; /* İçeriği ortalar */
+  flex-direction: column; /* İçeriği dikey hizalar */
+  padding: 20px; /* İçeriği biraz içeride tutar */
+}
+
+/* Büyük ekranlar için (1180px ve üzeri) */
+@media (min-width: 1180px) {
+  .roadmap {
+    height: 65vh; /* Büyük ekranlarda sabit yükseklik */
+  }
+  .roadmap--lockup {
+    flex-direction: row; /* İçeriği yatay hizalar */
+    justify-content: flex-end; /* İçeriği sağa hizalar */
+    padding-right: 20px; /* Sağdan boşluk */
+  }
+}
+
+/* Orta boyutlu ekranlar için (768px - 1180px arası) */
+@media (max-width: 1180px) and (min-width: 768px) {
+  .roadmap {
+    height: 75vh; /* Orta ekranlarda sabit yükseklik */
+  }
+  .roadmap--lockup {
+    flex-direction: column; /* İçeriği dikey hizalar */
+    justify-content: center; /* İçeriği ortalar */
+    padding: 20px; /* İçeriği biraz içeride tutar */
+  }
+}
+
+/* Küçük ekranlar için (768px ve altı) */
+@media (max-width: 767px) {
+  .roadmap {
+    padding-top: 100%; /* Küçük ekranlar için oranı değiştir */
+  }
+  .roadmap--lockup {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
