@@ -1426,7 +1426,7 @@
         }
       }),
       $(".cta").click(function () {
-        window.location.href = "https://x.com";
+        window.location.href = "https://x.com/gtaverseX";
       });
     var l = document.getElementById("viewport"),
       c = new Hammer(l);

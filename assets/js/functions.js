@@ -60,7 +60,7 @@ $( document ).ready(function() {
 
     updateNavs(lastItem);
     updateContent(curPos, nextPos, lastItem);
-    window.location.href="https://x.com";
+    window.location.href="https://x.com/gtaverseX";
 
   });
 

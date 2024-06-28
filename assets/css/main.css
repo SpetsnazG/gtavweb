@@ -1158,7 +1158,7 @@ body {
   -webkit-transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
   transition: bottom 0.2s ease-in-out, left 0.2s ease-in-out;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) { /* 767alt about*/
   .about--banner {
     height: 305px;
   }
@@ -1188,7 +1188,7 @@ body {
 }
 @media (max-width: 600px) {
   .about--banner {
-    height: auto;
+    height: 280px;
   }
   .about--banner::before {
     left: 155px;
@@ -1702,12 +1702,12 @@ body {
 .roadmap {
   position: relative; /* Sabit pozisyondan kaçınıyoruz */
   width: 100%; /* Genişliği %100 yapar */
-  height: auto; /* Yüksekliği otomatik yapar */
+  height: 100vh; /* Yüksekliği %100 viewport yüksekliği yapar */
   background-image: url("../img/roadmap2.png");
   background-position: center;
   background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
   background-repeat: no-repeat;
-  margin: 0 auto; /* Ortalar */
+  z-index: 1; /* Üstte görünmesini sağlar */
 }
 
 /* İçerik stil */
@@ -1722,6 +1722,33 @@ body {
   justify-content: center; /* İçeriği ortalar */
   flex-direction: column; /* İçeriği dikey hizalar */
   padding: 20px; /* İçeriği biraz içeride tutar */
+  z-index: 2; /* Üstte görünmesini sağlar */
+}
+
+/* Küçük ekranlar için (767px ve altı) */
+@media (max-width: 767px) {
+  .roadmap {
+    padding-top: 100%; /* Küçük ekranlar için oranı değiştir */
+    height: auto; /* Küçük ekranlar için yüksekliği otomatik yap */
+  }
+  .roadmap--lockup {
+    justify-content: center;
+    margin-top: 40%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Orta boyutlu ekranlar için (768px - 1179px arası) */
+@media (min-width: 768px) and (max-width: 1179px) {
+  .roadmap {
+    height: 75vh; /* Orta ekranlarda sabit yükseklik */
+  }
+  .roadmap--lockup {
+    flex-direction: column; /* İçeriği dikey hizalar */
+    justify-content: center; /* İçeriği ortalar */
+    padding: 20px; /* İçeriği biraz içeride tutar */
+  }
 }
 
 /* Büyük ekranlar için (1180px ve üzeri) */
@@ -1733,29 +1760,5 @@ body {
     flex-direction: row; /* İçeriği yatay hizalar */
     justify-content: flex-end; /* İçeriği sağa hizalar */
     padding-right: 20px; /* Sağdan boşluk */
-  }
-}
-
-/* Orta boyutlu ekranlar için (768px - 1180px arası) */
-@media (max-width: 1180px) and (min-width: 768px) {
-  .roadmap {
-    height: 75vh; /* Orta ekranlarda sabit yükseklik */
-  }
-  .roadmap--lockup {
-    flex-direction: column; /* İçeriği dikey hizalar */
-    justify-content: center; /* İçeriği ortalar */
-    padding: 20px; /* İçeriği biraz içeride tutar */
-  }
-}
-
-/* Küçük ekranlar için (768px ve altı) */
-@media (max-width: 767px) {
-  .roadmap {
-    padding-top: 100%; /* Küçük ekranlar için oranı değiştir */
-  }
-  .roadmap--lockup {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
   }
 }
